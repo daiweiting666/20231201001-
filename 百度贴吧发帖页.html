@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发布新帖子 - 百度贴吧</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 顶部导航栏 */
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3385ff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            color: #3385ff;
+            background-color: #f0f6ff;
+        }
+
+        .nav-links a.active {
+            color: #3385ff;
+            background-color: #f0f6ff;
+        }
+
+        .user-info-nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .user-avatar-small {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .username {
+            font-weight: 500;
+            color: #333;
+        }
+
+        /* 发帖页面主要内容 */
+        .post-container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .post-header {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+        }
+
+        .post-header h1 {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .post-header p {
+            color: #666;
+            font-size: 16px;
+        }
+
+        /* 发帖表单 */
+        .post-form {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .form-hint {
+            color: #999;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        /* 贴吧选择 */
+        .forum-select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 16px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.3s;
+        }
+
+        .forum-select:focus {
+            outline: none;
+            border-color: #3385ff;
+        }
+
+        /* 标题输入 */
+        .title-input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .title-input:focus {
+            outline: none;
+            border-color: #3385ff;
+        }
+
+        /* 富文本编辑器 */
+        .editor-container {
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+
+        .editor-toolbar {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .toolbar-btn {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .toolbar-btn:hover {
+            background: #f0f6ff;
+            border-color: #3385ff;
+            color: #3385ff;
+        }
+
+        .toolbar-btn.active {
+            background: #3385ff;
+            border-color: #3385ff;
+            color: white;
+        }
+
+        .editor-content {
+            min-height: 300px;
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            outline: none;
+        }
+
+        .editor-content:focus {
+            outline: none;
+        }
+
+        /* 发布按钮 */
+        .form-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .btn {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: #3385ff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2970cc;
+        }
+
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #666;
+            border: 1px solid #e9ecef;
+        }
+
+        .btn-secondary:hover {
+            background: #e9ecef;
+        }
+
+        /* 快速发帖入口 */
+        .quick-post-links {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            margin-top: 20px;
+        }
+
+        .quick-post-links h3 {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .quick-links {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .quick-link {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: #666;
+            font-size: 14px;
+            transition: all 0.3s;
+        }
+
+        .quick-link:hover {
+            background: #3385ff;
+            color: white;
+            border-color: #3385ff;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            
+            .post-container {
+                padding: 0 15px;
+            }
+            
+            .post-header, .post-form {
+                padding: 20px;
+            }
+            
+            .editor-toolbar {
+                padding: 8px 12px;
+            }
+            
+            .toolbar-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+            }
+            
+            .form-actions {
+                flex-direction: column;
+            }
+            
+            .btn {
+                width: 100%;
+            }
+            
+            .quick-links {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .post-header h1 {
+                font-size: 24px;
+            }
+            
+            .editor-content {
+                min-height: 200px;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="百度贴吧首页.html" class="logo">百度贴吧</a>
+            <ul class="nav-links">
+                <li><a href="百度贴吧首页.html">首页</a></li>
+                <li><a href="百度贴吧首页.html">贴吧</a></li>
+                <li><a href="百度贴吧发现页.html">发现</a></li>
+                <li><a href="#">消息</a></li>
+            </ul>
+            <div class="user-info-nav">
+                <div class="user-avatar-small">代</div>
+                <span class="username">代卫婷</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 发帖页面主要内容 -->
+    <div class="post-container">
+        <!-- 页面标题 -->
+        <div class="post-header">
+            <h1>发布新帖子</h1>
+            <p>分享你的想法和经验，与吧友一起交流讨论</p>
+        </div>
+
+        <!-- 发帖表单 -->
+        <form class="post-form" id="postForm">
+            <!-- 选择贴吧 -->
+            <div class="form-section">
+                <label class="form-label">选择贴吧</label>
+                <select class="forum-select" id="forumSelect" required>
+                    <option value="">请选择要发布的贴吧</option>
+                    <option value="game">游戏吧</option>
+                    <option value="movie">电影吧</option>
+                    <option value="music">音乐吧</option>
+                    <option value="food">美食吧</option>
+                    <option value="travel">旅游吧</option>
+                    <option value="tech">科技吧</option>
+                    <option value="sports">体育吧</option>
+                    <option value="anime">动漫吧</option>
+                    <option value="book">读书吧</option>
+                    <option value="fashion">时尚吧</option>
+                    <option value="car">汽车吧</option>
+                    <option value="pet">宠物吧</option>
+                </select>
+                <div class="form-hint">选择适合你帖子内容的贴吧，让更多感兴趣的吧友看到</div>
+            </div>
+
+            <!-- 帖子标题 -->
+            <div class="form-section">
+                <label class="form-label">帖子标题</label>
+                <input type="text" class="title-input" id="postTitle" placeholder="请输入帖子标题（最多50个字）" maxlength="50" required>
+                <div class="form-hint">标题要简洁明了，能够准确表达帖子内容</div>
+            </div>
+
+            <!-- 富文本编辑器 -->
+            <div class="form-section">
+                <label class="form-label">帖子内容</label>
+                <div class="editor-container">
+                    <!-- 工具栏 -->
+                    <div class="editor-toolbar">
+                        <button type="button" class="toolbar-btn" data-command="bold" title="加粗">
+                            <strong>B</strong>
+                        </button>
+                        <button type="button" class="toolbar-btn" data-command="italic" title="斜体">
+                            <em>I</em>
+                        </button>
+                        <button type="button" class="toolbar-btn" data-command="underline" title="下划线">
+                            <u>U</u>
+                        </button>
+                        <button type="button" class="toolbar-btn" data-command="insertUnorderedList" title="无序列表">
+                            • 列表
+                        </button>
+                        <button type="button" class="toolbar-btn" data-command="insertOrderedList" title="有序列表">
+                            1. 列表
+                        </button>
+                        <button type="button" class="toolbar-btn" data-command="createLink" title="插入链接">
+                            🔗 链接
+                        </button>
+                        <button type="button" class="toolbar-btn" data-command="formatBlock" data-value="blockquote" title="引用">
+                            ❝ 引用
+                        </button>
+                        <button type="button" class="toolbar-btn" data-command="removeFormat" title="清除格式">
+                            🧹 清除
+                        </button>
+                    </div>
+                    
+                    <!-- 编辑区域 -->
+                    <div class="editor-content" id="editor" contenteditable="true" placeholder="在这里输入帖子内容..."></div>
+                </div>
+                <div class="form-hint">支持文本格式化、列表、链接等基础格式</div>
+            </div>
+
+            <!-- 发布按钮 -->
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" onclick="window.history.back()">取消</button>
+                <button type="submit" class="btn btn-primary">发布帖子</button>
+            </div>
+        </form>
+
+        <!-- 快速发帖入口 -->
+        <div class="quick-post-links">
+            <h3>快速发帖入口</h3>
+            <div class="quick-links">
+                <a href="百度贴吧首页.html" class="quick-link">从首页发帖</a>
+                <a href="百度贴吧个人中心页.html" class="quick-link">从个人中心发帖</a>
+                <a href="百度贴吧帖子详情页.html" class="quick-link">从帖子详情发帖</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 富文本编辑器功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const editor = document.getElementById('editor');
+            const toolbarBtns = document.querySelectorAll('.toolbar-btn');
+            
+            // 工具栏按钮点击事件
+            toolbarBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const command = this.dataset.command;
+                    const value = this.dataset.value;
+                    
+                    // 移除其他按钮的激活状态
+                    toolbarBtns.forEach(b => b.classList.remove('active'));
+                    
+                    // 执行命令
+                    if (command === 'createLink') {
+                        const url = prompt('请输入链接地址：', 'https://');
+                        if (url) {
+                            document.execCommand(command, false, url);
+                            this.classList.add('active');
+                        }
+                    } else if (value) {
+                        document.execCommand(command, false, value);
+                        this.classList.add('active');
+                    } else {
+                        document.execCommand(command, false, null);
+                        this.classList.add('active');
+                    }
+                    
+                    // 重新聚焦编辑器
+                    editor.focus();
+                });
+            });
+
+            // 编辑器占位符
+            editor.addEventListener('focus', function() {
+                if (this.textContent === '在这里输入帖子内容...') {
+                    this.textContent = '';
+                }
+            });
+
+            editor.addEventListener('blur', function() {
+                if (this.textContent === '') {
+                    this.textContent = '在这里输入帖子内容...';
+                }
+            });
+
+            // 表单提交
+            const postForm = document.getElementById('postForm');
+            postForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const forumSelect = document.getElementById('forumSelect');
+                const postTitle = document.getElementById('postTitle');
+                const editorContent = editor.innerHTML;
+                
+                // 验证表单
+                if (!forumSelect.value) {
+                    alert('请选择要发布的贴吧');
+                    forumSelect.focus();
+                    return;
+                }
+                
+                if (!postTitle.value.trim()) {
+                    alert('请输入帖子标题');
+                    postTitle.focus();
+                    return;
+                }
+                
+                if (editor.textContent.trim() === '' || editor.textContent.trim() === '在这里输入帖子内容...') {
+                    alert('请输入帖子内容');
+                    editor.focus();
+                    return;
+                }
+                
+                // 模拟发布成功
+                const forumName = forumSelect.options[forumSelect.selectedIndex].text;
+                alert(`帖子发布成功！\n贴吧：${forumName}\n标题：${postTitle.value}`);
+                
+                // 清空表单
+                forumSelect.value = '';
+                postTitle.value = '';
+                editor.innerHTML = '在这里输入帖子内容...';
+                
+                // 移除工具栏激活状态
+                toolbarBtns.forEach(btn => btn.classList.remove('active'));
+            });
+
+            // 快速链接点击事件
+            const quickLinks = document.querySelectorAll('.quick-link');
+            quickLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href');
+                    window.location.href = target;
+                });
+            });
+
+            // 页面加载时设置编辑器占位符
+            if (editor.textContent === '') {
+                editor.textContent = '在这里输入帖子内容...';
+            }
+        });
+
+        // 导航栏交互
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航栏链接点击效果
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // 只有当链接是锚链接（#）时才阻止默认行为
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        
+                        // 移除所有激活状态
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        // 添加当前激活状态
+                        this.classList.add('active');
+                    }
+                    // 有有效链接的按钮可以正常跳转
+                });
+            });
+        });
+    </script>
+</body>
+</html>

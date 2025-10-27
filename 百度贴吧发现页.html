@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发现 - 百度贴吧</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 顶部导航栏 */
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3385ff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            color: #3385ff;
+            background-color: #f0f6ff;
+        }
+
+        .nav-links a.active {
+            color: #3385ff;
+            background-color: #f0f6ff;
+        }
+
+        .login-btn {
+            background: #3385ff;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #2970cc;
+        }
+
+        .post-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        .post-btn:hover {
+            background: #e55a2b;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 发现页面内容 */
+        .discover-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .discover-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .discover-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .discover-subtitle {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* 推荐区域 */
+        .recommendation-section {
+            margin-bottom: 50px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .view-all {
+            color: #3385ff;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .view-all:hover {
+            text-decoration: underline;
+        }
+
+        /* 热门帖子推荐 */
+        .hot-posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .hot-post-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .hot-post-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .post-tag {
+            background: #3385ff;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .post-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .post-excerpt {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .post-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .post-stats {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* 贴吧推荐 */
+        .tieba-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .tieba-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .tieba-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .tieba-icon {
+            width: 60px;
+            height: 60px;
+            background: #3385ff;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .tieba-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .tieba-members {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .tieba-tags {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .tieba-tag {
+            background: #f0f6ff;
+            color: #3385ff;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+
+        .follow-btn {
+            background: #3385ff;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .follow-btn:hover {
+            background: #2970cc;
+        }
+
+        /* 话题活动 */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .topic-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+
+        .topic-card:hover {
+            transform: translateY(-2px);
+        }
+
+        .topic-image {
+            width: 100%;
+            height: 160px;
+            background: linear-gradient(135deg, #8a2be2 0%, #6a0dad 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+        }
+
+        .topic-content {
+            padding: 20px;
+        }
+
+        .topic-badge {
+            background: #ff6b35;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .topic-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .topic-desc {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .topic-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .participate-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .participate-btn:hover {
+            background: #e55a2b;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="百度贴吧首页.html" class="logo">百度贴吧</a>
+            <ul class="nav-links">
+                <li><a href="百度贴吧首页.html">首页</a></li>
+                <li><a href="百度贴吧首页.html">贴吧</a></li>
+                <li><a href="#" class="active">发现</a></li>
+                <li><a href="#">消息</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="post-btn">发帖</button>
+                <button class="login-btn">登录</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 发现页面内容 -->
+    <div class="discover-container">
+        <div class="discover-header">
+            <h1 class="discover-title">发现精彩内容</h1>
+            <p class="discover-subtitle">基于你的兴趣，为你推荐热门帖子和优质贴吧</p>
+        </div>
+
+        <!-- 热门帖子推荐 -->
+        <section class="recommendation-section">
+            <div class="section-header">
+                <h2 class="section-title">热门推荐帖子</h2>
+                <a href="#" class="view-all">查看全部</a>
+            </div>
+            <div class="hot-posts-grid">
+                <!-- 帖子1 -->
+                <div class="hot-post-card">
+                    <span class="post-tag">游戏</span>
+                    <h3 class="post-title">【游戏攻略】最新游戏隐藏关卡全解析</h3>
+                    <p class="post-excerpt">发现游戏中的隐藏彩蛋和秘密关卡，带你体验不一样的游戏乐趣...</p>
+                    <div class="post-meta">
+                        <span>游戏吧 · 2小时前</span>
+                        <div class="post-stats">
+                            <span>👍 342</span>
+                            <span>💬 156</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 帖子2 -->
+                <div class="hot-post-card">
+                    <span class="post-tag">影视</span>
+                    <h3 class="post-title">【电影解析】科幻大片背后的科学原理</h3>
+                    <p class="post-excerpt">从科学角度分析热门科幻电影中的设定是否合理，涨知识了...</p>
+                    <div class="post-meta">
+                        <span>电影吧 · 5小时前</span>
+                        <div class="post-stats">
+                            <span>👍 289</span>
+                            <span>💬 134</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 帖子3 -->
+                <div class="hot-post-card">
+                    <span class="post-tag">生活</span>
+                    <h3 class="post-title">【生活技巧】10个提升生活品质的小习惯</h3>
+                    <p class="post-excerpt">简单易行的生活小技巧，让你的每一天都充满幸福感...</p>
+                    <div class="post-meta">
+                        <span>生活吧 · 1天前</span>
+                        <div class="post-stats">
+                            <span>👍 456</span>
+                            <span>💬 223</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 帖子4 -->
+                <div class="hot-post-card">
+                    <span class="post-tag">科技</span>
+                    <h3 class="post-title">【科技前沿】AI技术的最新应用场景</h3>
+                    <p class="post-excerpt">人工智能在各行各业的应用案例分享，了解科技发展趋势...</p>
+                    <div class="post-meta">
+                        <span>科技吧 · 2天前</span>
+                        <div class="post-stats">
+                            <span>👍 378</span>
+                            <span>💬 189</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 贴吧推荐 -->
+        <section class="recommendation-section">
+            <div class="section-header">
+                <h2 class="section-title">贴吧推荐</h2>
+                <a href="#" class="view-all">查看更多</a>
+            </div>
+            <div class="tieba-grid">
+                <!-- 贴吧1 -->
+                <div class="tieba-card">
+                    <div class="tieba-icon">游</div>
+                    <h3 class="tieba-name">游戏攻略吧</h3>
+                    <div class="tieba-members">45万成员</div>
+                    <div class="tieba-tags">
+                        <span class="tieba-tag">游戏</span>
+                        <span class="tieba-tag">攻略</span>
+                        <span class="tieba-tag">技巧</span>
+                    </div>
+                    <button class="follow-btn">关注</button>
+                </div>
+
+                <!-- 贴吧2 -->
+                <div class="tieba-card">
+                    <div class="tieba-icon">电</div>
+                    <h3 class="tieba-name">电影爱好者吧</h3>
+                    <div class="tieba-members">32万成员</div>
+                    <div class="tieba-tags">
+                        <span class="tieba-tag">电影</span>
+                        <span class="tieba-tag">影评</span>
+                        <span class="tieba-tag">推荐</span>
+                    </div>
+                    <button class="follow-btn">关注</button>
+                </div>
+
+                <!-- 贴吧3 -->
+                <div class="tieba-card">
+                    <div class="tieba-icon">美</div>
+                    <h3 class="tieba-name">美食制作吧</h3>
+                    <div class="tieba-members">28万成员</div>
+                    <div class="tieba-tags">
+                        <span class="tieba-tag">美食</span>
+                        <span class="tieba-tag">食谱</span>
+                        <span class="tieba-tag">烹饪</span>
+                    </div>
+                    <button class="follow-btn">关注</button>
+                </div>
+
+                <!-- 贴吧4 -->
+                <div class="tieba-card">
+                    <div class="tieba-icon">科</div>
+                    <h3 class="tieba-name">科技前沿吧</h3>
+                    <div class="tieba-members">36万成员</div>
+                    <div class="tieba-tags">
+                        <span class="tieba-tag">科技</span>
+                        <span class="tieba-tag">创新</span>
+                        <span class="tieba-tag">AI</span>
+                    </div>
+                    <button class="follow-btn">关注</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 话题活动 -->
+        <section class="recommendation-section">
+            <div class="section-header">
+                <h2 class="section-title">热门话题/活动</h2>
+                <a href="#" class="view-all">查看全部</a>
+            </div>
+            <div class="topic-grid">
+                <!-- 话题1 -->
+                <div class="topic-card">
+                    <div class="topic-image">🎮</div>
+                    <div class="topic-content">
+                        <span class="topic-badge">官方活动</span>
+                        <h3 class="topic-title">游戏开发者访谈周</h3>
+                        <p class="topic-desc">与知名游戏开发者面对面交流，了解游戏制作背后的故事</p>
+                        <div class="topic-meta">
+                            <span>3天前 · 1.2万参与</span>
+                            <button class="participate-btn">参与</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 话题2 -->
+                <div class="topic-card">
+                    <div class="topic-image">🎬</div>
+                    <div class="topic-content">
+                        <span class="topic-badge">热门话题</span>
+                        <h3 class="topic-title">年度最佳电影评选</h3>
+                        <p class="topic-desc">为你喜欢的电影投票，参与年度最佳电影评选活动</p>
+                        <div class="topic-meta">
+                            <span>1周前 · 8.5万参与</span>
+                            <button class="participate-btn">参与</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 话题3 -->
+                <div class="topic-card">
+                    <div class="topic-image">🍳</div>
+                    <div class="topic-content">
+                        <span class="topic-badge">美食挑战</span>
+                        <h3 class="topic-title">家常菜创意大赛</h3>
+                        <p class="topic-desc">分享你的创意家常菜，赢取精美厨具和美食礼包</p>
+                        <div class="topic-meta">
+                            <span>2天前 · 5.6万参与</span>
+                            <button class="participate-btn">参与</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 话题4 -->
+                <div class="topic-card">
+                    <div class="topic-image">🤖</div>
+                    <div class="topic-content">
+                        <span class="topic-badge">科技论坛</span>
+                        <h3 class="topic-title">AI技术应用研讨会</h3>
+                        <p class="topic-desc">与行业专家探讨AI技术在各领域的应用前景</p>
+                        <div class="topic-meta">
+                            <span>5天前 · 3.4万参与</span>
+                            <button class="participate-btn">参与</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 导航栏交互
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航栏链接点击效果
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.getAttribute('href') !== '#') {
+                        return; // 允许正常跳转
+                    }
+                    e.preventDefault();
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // 发帖按钮
+            const postBtn = document.querySelector('.post-btn');
+            postBtn.addEventListener('click', function() {
+                window.location.href = '百度贴吧发帖页.html';
+            });
+
+            // 登录按钮
+            const loginBtn = document.querySelector('.login-btn');
+            loginBtn.addEventListener('click', function() {
+                window.location.href = '百度贴吧个人中心页.html';
+            });
+
+            // 关注按钮
+            const followBtns = document.querySelectorAll('.follow-btn');
+            followBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    if (this.textContent === '关注') {
+                        this.textContent = '已关注';
+                        this.style.background = '#28a745';
+                    } else {
+                        this.textContent = '关注';
+                        this.style.background = '#3385ff';
+                    }
+                });
+            });
+
+            // 参与按钮
+            const participateBtns = document.querySelectorAll('.participate-btn');
+            participateBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    alert('已参与该话题活动！');
+                });
+            });
+
+            // 帖子卡片点击跳转
+            const postCards = document.querySelectorAll('.hot-post-card');
+            postCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    window.location.href = '百度贴吧帖子详情页.html';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

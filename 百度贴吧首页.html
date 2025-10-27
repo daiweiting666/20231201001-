@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度贴吧 - 全球最大的中文社区</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 顶部导航栏 */
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3385ff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            color: #3385ff;
+            background-color: #f0f6ff;
+        }
+
+        .nav-links a.active {
+            color: #3385ff;
+            background-color: #f0f6ff;
+        }
+
+        .login-btn {
+            background: #3385ff;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #2970cc;
+        }
+
+        .post-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-right: 10px;
+        }
+
+        .post-btn:hover {
+            background: #e55a2b;
+        }
+
+        .nav-buttons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* 搜索区域 */
+        .search-section {
+            background: linear-gradient(135deg, #8a2be2 0%, #6a0dad 100%);
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .search-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .search-title {
+            color: white;
+            font-size: 32px;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .search-box {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .search-input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            font-size: 16px;
+            outline: none;
+            background: transparent;
+        }
+
+        .search-input::placeholder {
+            color: #999;
+        }
+
+        .search-btn {
+            background: #ff6b35;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #e55a2b;
+        }
+
+        /* 主要内容区域 */
+        .main-content {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+
+        /* 分类卡片区域 */
+        .category-section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .category-grid {
+            display: grid;
+            gap: 15px;
+        }
+
+        .category-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid #e9ecef;
+        }
+
+        .category-card:hover {
+            background: #e9ecef;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .category-members {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* 帖子列表区域 */
+        .posts-section {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .post-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .post-item {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            border: 1px solid #e9ecef;
+        }
+
+        .post-item:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .post-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .post-meta {
+            flex: 1;
+        }
+
+        .post-author {
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .post-time {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .post-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .post-content {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-stats {
+            display: flex;
+            gap: 20px;
+            font-size: 13px;
+            color: #999;
+        }
+
+        .post-stat {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            
+            .search-title {
+                font-size: 24px;
+            }
+            
+            .search-box {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .nav-links {
+                gap: 10px;
+            }
+            
+            .search-section {
+                padding: 40px 0;
+            }
+            
+            .search-title {
+                font-size: 20px;
+            }
+            
+            .search-input {
+                padding: 12px 15px;
+                font-size: 14px;
+            }
+            
+            .search-btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">百度贴吧</a>
+            <ul class="nav-links">
+                <li><a href="百度贴吧首页.html" class="active">首页</a></li>
+                <li><a href="百度贴吧首页.html">贴吧</a></li>
+                <li><a href="百度贴吧发现页.html">发现</a></li>
+                <li><a href="#">消息</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <button class="post-btn">发帖</button>
+                <button class="login-btn">登录</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 搜索区域 -->
+    <section class="search-section">
+        <div class="search-container">
+            <h1 class="search-title">搜索贴吧、帖子或用户...</h1>
+            <div class="search-box">
+                <input type="text" class="search-input" placeholder="输入关键词搜索">
+                <button class="search-btn">搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主要内容区域 -->
+    <div class="main-content">
+        <!-- 左侧分类卡片 -->
+        <aside class="category-section">
+            <h2 class="section-title">热门贴吧</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-name">游戏吧</div>
+                    <div class="category-members">123万成员</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-name">电影吧</div>
+                    <div class="category-members">98万成员</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-name">音乐吧</div>
+                    <div class="category-members">87万成员</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-name">美食吧</div>
+                    <div class="category-members">76万成员</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-name">旅游吧</div>
+                    <div class="category-members">65万成员</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-name">科技吧</div>
+                    <div class="category-members">54万成员</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-name">体育吧</div>
+                    <div class="category-members">43万成员</div>
+                </div>
+                <div class="category-card">
+                    <div class="category-name">动漫吧</div>
+                    <div class="category-members">32万成员</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 右侧帖子列表 -->
+        <section class="posts-section">
+            <h2 class="section-title">热门帖子</h2>
+            <div class="post-list">
+                <!-- 帖子1 -->
+                <article class="post-item">
+                    <div class="post-header">
+                        <div class="post-avatar">张</div>
+                        <div class="post-meta">
+                            <div class="post-author">张三</div>
+                            <div class="post-time">2小时前</div>
+                        </div>
+                    </div>
+                    <h3 class="post-title">【游戏讨论】最新游戏大作体验分享，画面太震撼了！</h3>
+                    <p class="post-content">今天终于玩到了期待已久的新游戏，画面效果确实非常出色，剧情也很吸引人。想和大家分享一下我的游戏体验...</p>
+                    <div class="post-stats">
+                        <span class="post-stat">👍 256</span>
+                        <span class="post-stat">💬 89</span>
+                        <span class="post-stat">👁️ 1.2万</span>
+                    </div>
+                </article>
+
+                <!-- 帖子2 -->
+                <article class="post-item">
+                    <div class="post-header">
+                        <div class="post-avatar">李</div>
+                        <div class="post-meta">
+                            <div class="post-author">李四</div>
+                            <div class="post-time">5小时前</div>
+                        </div>
+                    </div>
+                    <h3 class="post-title">【电影推荐】最近看了一部超好看的科幻电影</h3>
+                    <p class="post-content">这部电影的特效和剧情都很棒，特别是结尾的反转让人意想不到。强烈推荐给大家...</p>
+                    <div class="post-stats">
+                        <span class="post-stat">👍 189</span>
+                        <span class="post-stat">💬 67</span>
+                        <span class="post-stat">👁️ 8.5千</span>
+                    </div>
+                </article>
+
+                <!-- 帖子3 -->
+                <article class="post-item">
+                    <div class="post-header">
+                        <div class="post-avatar">王</div>
+                        <div class="post-meta">
+                            <div class="post-author">王五</div>
+                            <div class="post-time">1天前</div>
+                        </div>
+                    </div>
+                    <h3 class="post-title">【音乐分享】推荐几首适合学习时听的轻音乐</h3>
+                    <p class="post-content">最近发现了一些很适合学习时听的背景音乐，能够帮助集中注意力，提高学习效率...</p>
+                    <div class="post-stats">
+                        <span class="post-stat">👍 324</span>
+                        <span class="post-stat">💬 142</span>
+                        <span class="post-stat">👁️ 1.5万</span>
+                    </div>
+                </article>
+
+                <!-- 帖子4 -->
+                <article class="post-item">
+                    <div class="post-header">
+                        <div class="post-avatar">赵</div>
+                        <div class="post-meta">
+                            <div class="post-author">赵六</div>
+                            <div class="post-time">2天前</div>
+                        </div>
+                    </div>
+                    <h3 class="post-title">【美食教程】简单易学的家常菜做法分享</h3>
+                    <p class="post-content">今天教大家做一道简单又美味的家常菜，材料简单，步骤清晰，适合新手学习...</p>
+                    <div class="post-stats">
+                        <span class="post-stat">👍 432</span>
+                        <span class="post-stat">💬 198</span>
+                        <span class="post-stat">👁️ 2.3万</span>
+                    </div>
+                </article>
+
+                <!-- 帖子5 -->
+                <article class="post-item">
+                    <div class="post-header">
+                        <div class="post-avatar">钱</div>
+                        <div class="post-meta">
+                            <div class="post-author">钱七</div>
+                            <div class="post-time">3天前</div>
+                        </div>
+                    </div>
+                    <h3 class="post-title">【旅游攻略】五一假期最适合去的几个地方</h3>
+                    <p class="post-content">五一假期快到了，给大家推荐几个性价比高的旅游目的地，人少景美...</p>
+                    <div class="post-stats">
+                        <span class="post-stat">👍 287</span>
+                        <span class="post-stat">💬 123</span>
+                        <span class="post-stat">👁️ 1.8万</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 简单的交互效果
+        document.addEventListener('DOMContentLoaded', function() {
+            // 导航栏链接点击效果
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // 只对没有有效链接的按钮阻止默认行为
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                    // 有有效链接的按钮允许正常跳转
+                });
+            });
+
+            // 搜索功能
+            const searchBtn = document.querySelector('.search-btn');
+            const searchInput = document.querySelector('.search-input');
+            
+            searchBtn.addEventListener('click', function() {
+                const keyword = searchInput.value.trim();
+                if (keyword) {
+                    alert('搜索关键词: ' + keyword);
+                } else {
+                    alert('请输入搜索关键词');
+                }
+            });
+
+            // 回车搜索
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    searchBtn.click();
+                }
+            });
+
+            // 分类卡片点击效果
+            const categoryCards = document.querySelectorAll('.category-card');
+            categoryCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const categoryName = this.querySelector('.category-name').textContent;
+                    alert('进入' + categoryName);
+                });
+            });
+
+            // 帖子点击效果
+            const postItems = document.querySelectorAll('.post-item');
+            postItems.forEach((post, index) => {
+                post.addEventListener('click', function() {
+                    // 根据帖子索引跳转到不同的帖子详情页
+                    const postTitles = [
+                        '【游戏讨论】最新游戏大作体验分享，画面太震撼了！',
+                        '【电影推荐】最近看了一部超好看的科幻电影',
+                        '【音乐分享】推荐几首适合学习时听的轻音乐',
+                        '【美食教程】简单易学的家常菜做法分享',
+                        '【旅游攻略】五一假期最适合去的几个地方'
+                    ];
+                    
+                    // 设置帖子标题到localStorage，供详情页读取
+                    localStorage.setItem('currentPostTitle', postTitles[index]);
+                    localStorage.setItem('currentPostIndex', index.toString());
+                    
+                    // 跳转到帖子详情页
+                    window.location.href = '百度贴吧帖子详情页.html';
+                });
+            });
+
+            // 登录按钮点击事件
+            const loginBtn = document.querySelector('.login-btn');
+            loginBtn.addEventListener('click', function() {
+                // 跳转到个人中心页
+                window.location.href = '百度贴吧个人中心页.html';
+            });
+
+            // 发帖按钮点击事件
+            const postBtn = document.querySelector('.post-btn');
+            postBtn.addEventListener('click', function() {
+                // 跳转到发帖页
+                window.location.href = '百度贴吧发帖页.html';
+            });
+        });
+    </script>
+</body>
+</html>

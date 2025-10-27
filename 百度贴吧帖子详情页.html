@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【游戏攻略】分享一些游戏攻略，新手必看！ - 百度贴吧</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* 顶部导航栏 */
+        .navbar {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3385ff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #666;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        .nav-links a:hover {
+            color: #3385ff;
+            background-color: #f0f6ff;
+        }
+
+        .nav-links a.active {
+            color: #3385ff;
+            background-color: #f0f6ff;
+        }
+
+        .login-btn {
+            background: #3385ff;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #2970cc;
+        }
+
+        /* 面包屑导航 */
+        .breadcrumb {
+            max-width: 1200px;
+            margin: 20px auto 0;
+            padding: 0 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .breadcrumb a {
+            color: #3385ff;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* 帖子详情内容 */
+        .post-detail {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+        }
+
+        /* 帖子内容区域 */
+        .post-content-section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .post-header {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .post-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .post-meta {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: bold;
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .post-time {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .post-stats {
+            display: flex;
+            gap: 25px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .post-stat {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .post-stat i {
+            font-size: 16px;
+        }
+
+        .post-body {
+            margin-bottom: 30px;
+        }
+
+        .post-summary {
+            background: #f8f9fa;
+            border-left: 4px solid #3385ff;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .post-summary h3 {
+            color: #3385ff;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .post-summary p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .post-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #333;
+        }
+
+        .post-text p {
+            margin-bottom: 15px;
+        }
+
+        .post-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .action-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            background: white;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+        }
+
+        .action-btn:hover {
+            background: #f8f9fa;
+            border-color: #3385ff;
+            color: #3385ff;
+        }
+
+        .action-btn.liked {
+            background: #fff0f0;
+            border-color: #ff6b6b;
+            color: #ff6b6b;
+        }
+
+        /* 评论区 */
+        .comments-section {
+            margin-top: 30px;
+        }
+
+        .comments-header {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        .comment-form {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+
+        .comment-input {
+            width: 100%;
+            min-height: 100px;
+            padding: 15px;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            font-size: 14px;
+            resize: vertical;
+            margin-bottom: 15px;
+        }
+
+        .comment-submit {
+            background: #3385ff;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .comment-submit:hover {
+            background: #2970cc;
+        }
+
+        .comment-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .comment-item {
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+        }
+
+        .comment-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .comment-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .comment-author {
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .comment-time {
+            color: #999;
+            font-size: 12px;
+        }
+
+        .comment-text {
+            color: #333;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .comment-actions {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .comment-action {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .comment-action:hover {
+            color: #3385ff;
+        }
+
+        /* 侧边栏 */
+        .sidebar {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .related-posts {
+            margin-bottom: 30px;
+        }
+
+        .related-post {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 10px;
+        }
+
+        .related-post:hover {
+            background: #f8f9fa;
+        }
+
+        .related-post-avatar {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .related-post-title {
+            font-size: 14px;
+            color: #333;
+            line-height: 1.4;
+            flex: 1;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .post-detail {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .post-title {
+                font-size: 24px;
+            }
+            
+            .nav-links {
+                gap: 15px;
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+            
+            .post-stats {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                padding: 0 15px;
+            }
+            
+            .post-content-section {
+                padding: 20px;
+            }
+            
+            .post-title {
+                font-size: 20px;
+            }
+            
+            .post-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+            
+            .post-stats {
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="百度贴吧首页.html" class="logo">百度贴吧</a>
+            <ul class="nav-links">
+                <li><a href="百度贴吧首页.html">首页</a></li>
+                <li><a href="百度贴吧首页.html" class="active">贴吧</a></li>
+                <li><a href="百度贴吧发现页.html">发现</a></li>
+                <li><a href="#">消息</a></li>
+            </ul>
+            <button class="login-btn">登录</button>
+        </div>
+    </nav>
+
+    <!-- 面包屑导航 -->
+    <div class="breadcrumb">
+        <a href="百度贴吧首页.html">首页</a> &gt; 
+        <a href="#">游戏吧</a> &gt; 
+        <span>帖子详情</span>
+    </div>
+
+    <!-- 帖子详情内容 -->
+    <div class="post-detail">
+        <!-- 侧边栏 -->
+        <aside class="sidebar">
+            <div class="related-posts">
+                <h3 class="section-title">相关帖子</h3>
+                <div class="related-post" onclick="location.href='#'">
+                    <div class="related-post-avatar">王</div>
+                    <div class="related-post-title">游戏新手入门指南，快速上手技巧</div>
+                </div>
+                <div class="related-post" onclick="location.href='#'">
+                    <div class="related-post-avatar">李</div>
+                    <div class="related-post-title">最新游戏版本更新内容详解</div>
+                </div>
+                <div class="related-post" onclick="location.href='#'">
+                    <div class="related-post-avatar">赵</div>
+                    <div class="related-post-title">游戏装备搭配推荐攻略</div>
+                </div>
+                <div class="related-post" onclick="location.href='#'">
+                    <div class="related-post-avatar">钱</div>
+                    <div class="related-post-title">多人联机游戏技巧分享</div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 帖子内容区域 -->
+        <main class="post-content-section">
+            <!-- 帖子头部 -->
+            <div class="post-header">
+                <h1 class="post-title">【游戏攻略】分享一些游戏攻略，新手必看！</h1>
+                
+                <div class="post-meta">
+                    <div class="author-avatar">张</div>
+                    <div class="author-info">
+                        <div class="author-name">张三</div>
+                        <div class="post-time">发布于 2024-01-15 14:30</div>
+                    </div>
+                    <div class="post-stats">
+                        <div class="post-stat">
+                            <i>👍</i> 256
+                        </div>
+                        <div class="post-stat">
+                            <i>💬</i> 89
+                        </div>
+                        <div class="post-stat">
+                            <i>👁️</i> 1.2万
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 帖子内容 -->
+            <div class="post-body">
+                <div class="post-summary">
+                    <h3>帖子摘要</h3>
+                    <p>本文主要分享一些适合游戏新手的实用攻略，包括基础操作技巧、装备选择建议、任务完成方法等，帮助新手玩家快速上手游戏。</p>
+                </div>
+                
+                <div class="post-text">
+                    <p>大家好，我是游戏吧的老玩家张三。今天想和大家分享一些我在游戏中总结的实用攻略，特别适合刚接触这款游戏的新手玩家。</p>
+                    
+                    <p><strong>一、基础操作技巧</strong></p>
+                    <p>1. 熟悉基本按键：建议新手先花时间熟悉游戏的基本操作按键，特别是移动、攻击、技能释放等核心功能。</p>
+                    <p>2. 视角调整：合理调整游戏视角可以帮助你更好地观察战场情况，建议根据个人习惯设置合适的视角灵敏度。</p>
+                    
+                    <p><strong>二、装备选择建议</strong></p>
+                    <p>1. 新手装备：刚开始游戏时，建议选择一些基础但实用的装备，不要急于追求高级装备。</p>
+                    <p>2. 装备升级：优先升级武器和防具，这些对战斗力的提升最为明显。</p>
+                    
+                    <p><strong>三、任务完成方法</strong></p>
+                    <p>1. 主线任务：优先完成主线任务，这样可以快速了解游戏剧情和获得基础奖励。</p>
+                    <p>2. 支线任务：在完成主线任务的间隙，可以适当做一些支线任务来获取额外经验值和道具。</p>
+                    
+                    <p>希望这些攻略对新手玩家有所帮助！如果大家有其他问题，欢迎在评论区留言讨论。</p>
+                </div>
+            </div>
+
+            <!-- 帖子操作按钮 -->
+            <div class="post-actions">
+                <button class="action-btn" id="likeBtn">
+                    <i>👍</i> 点赞
+                </button>
+                <button class="action-btn">
+                    <i>💬</i> 评论
+                </button>
+                <button class="action-btn">
+                    <i>🔗</i> 分享
+                </button>
+                <button class="action-btn">
+                    <i>⭐</i> 收藏
+                </button>
+            </div>
+
+            <!-- 评论区 -->
+            <div class="comments-section">
+                <h3 class="comments-header">评论 (89)</h3>
+                
+                <!-- 评论输入框 -->
+                <div class="comment-form">
+                    <textarea class="comment-input" placeholder="写下你的评论..."></textarea>
+                    <button class="comment-submit">发表评论</button>
+                </div>
+
+                <!-- 评论列表 -->
+                <div class="comment-list">
+                    <!-- 评论1 -->
+                    <div class="comment-item">
+                        <div class="comment-header">
+                            <div class="comment-avatar">李</div>
+                            <div>
+                                <div class="comment-author">李四</div>
+                                <div class="comment-time">2小时前</div>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            感谢分享！这些攻略对我这个新手来说太有用了，特别是装备选择的部分。
+                        </div>
+                        <div class="comment-actions">
+                            <div class="comment-action">
+                                <i>👍</i> 15
+                            </div>
+                            <div class="comment-action">
+                                <i>💬</i> 回复
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评论2 -->
+                    <div class="comment-item">
+                        <div class="comment-header">
+                            <div class="comment-avatar">王</div>
+                            <div>
+                                <div class="comment-author">王五</div>
+                                <div class="comment-time">3小时前</div>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            想问一下楼主，新手应该优先完成哪些任务？主线任务和支线任务哪个更重要？
+                        </div>
+                        <div class="comment-actions">
+                            <div class="comment-action">
+                                <i>👍</i> 8
+                            </div>
+                            <div class="comment-action">
+                                <i>💬</i> 回复
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 评论3 -->
+                    <div class="comment-item">
+                        <div class="comment-header">
+                            <div class="comment-avatar">赵</div>
+                            <div>
+                                <div class="comment-author">赵六</div>
+                                <div class="comment-time">5小时前</div>
+                            </div>
+                        </div>
+                        <div class="comment-text">
+                            作为老玩家补充一点：新手期不要急于PK，先熟悉游戏机制更重要。
+                        </div>
+                        <div class="comment-actions">
+                            <div class="comment-action">
+                                <i>👍</i> 23
+                            </div>
+                            <div class="comment-action">
+                                <i>💬</i> 回复
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // 交互功能
+        document.addEventListener('DOMContentLoaded', function() {
+            // 根据首页传递的参数显示不同的帖子内容
+            const currentPostTitle = localStorage.getItem('currentPostTitle') || '【游戏攻略】分享一些游戏攻略，新手必看！';
+            const currentPostIndex = parseInt(localStorage.getItem('currentPostIndex')) || 0;
+            
+            // 帖子内容数据
+            const postData = [
+                {
+                    title: '【游戏讨论】最新游戏大作体验分享，画面太震撼了！',
+                    author: '张三',
+                    time: '2小时前',
+                    likes: 256,
+                    comments: 89,
+                    views: '1.2万',
+                    summary: '今天终于玩到了期待已久的新游戏，画面效果确实非常出色，剧情也很吸引人。想和大家分享一下我的游戏体验...',
+                    content: `
+                        <p>大家好，我是游戏吧的玩家张三。今天终于体验了期待已久的最新游戏大作，想和大家分享一下我的感受。</p>
+                        
+                        <p><strong>一、画面表现</strong></p>
+                        <p>这款游戏的画面效果确实非常出色，光影效果和细节处理都很到位。特别是游戏中的场景设计，每个角落都充满了细节。</p>
+                        
+                        <p><strong>二、剧情体验</strong></p>
+                        <p>剧情方面也很吸引人，故事发展节奏紧凑，人物塑造立体。特别是主角的成长历程，让人很有代入感。</p>
+                        
+                        <p><strong>三、游戏性</strong></p>
+                        <p>游戏的操作手感很好，战斗系统流畅，技能搭配也很有深度。不过对于新手来说可能需要一些时间适应。</p>
+                        
+                        <p>总体来说，这款游戏值得推荐给喜欢RPG游戏的玩家！</p>
+                    `
+                },
+                {
+                    title: '【电影推荐】最近看了一部超好看的科幻电影',
+                    author: '李四',
+                    time: '5小时前',
+                    likes: 189,
+                    comments: 67,
+                    views: '8.5千',
+                    summary: '这部电影的特效和剧情都很棒，特别是结尾的反转让人意想不到。强烈推荐给大家...',
+                    content: `
+                        <p>大家好，我是电影爱好者李四。最近看了一部非常精彩的科幻电影，想推荐给大家。</p>
+                        
+                        <p><strong>一、特效表现</strong></p>
+                        <p>这部电影的特效制作非常精良，特别是太空场景和未来科技的展现，视觉效果震撼。</p>
+                        
+                        <p><strong>二、剧情设计</strong></p>
+                        <p>剧情方面也很出色，故事逻辑严密，情节发展出人意料。特别是结尾的反转，让人印象深刻。</p>
+                        
+                        <p><strong>三、演员表现</strong></p>
+                        <p>主演们的演技都很到位，情感表达真实自然，能够很好地带动观众情绪。</p>
+                        
+                        <p>强烈推荐给喜欢科幻题材的朋友们！</p>
+                    `
+                },
+                {
+                    title: '【音乐分享】推荐几首适合学习时听的轻音乐',
+                    author: '王五',
+                    time: '1天前',
+                    likes: 324,
+                    comments: 142,
+                    views: '1.5万',
+                    summary: '最近发现了一些很适合学习时听的背景音乐，能够帮助集中注意力，提高学习效率...',
+                    content: `
+                        <p>大家好，我是音乐爱好者王五。今天想和大家分享一些适合学习时听的轻音乐。</p>
+                        
+                        <p><strong>一、古典音乐</strong></p>
+                        <p>莫扎特、贝多芬的古典音乐能够帮助大脑放松，提高专注力，特别适合需要深度思考的学习任务。</p>
+                        
+                        <p><strong>二、自然声音</strong></p>
+                        <p>雨声、海浪声等自然声音能够营造安静的学习氛围，帮助缓解学习压力。</p>
+                        
+                        <p><strong>三、纯音乐</strong></p>
+                        <p>钢琴、吉他等纯音乐旋律优美，不会分散注意力，适合长时间学习时作为背景音乐。</p>
+                        
+                        <p>希望这些音乐推荐能够帮助大家提高学习效率！</p>
+                    `
+                },
+                {
+                    title: '【美食教程】简单易学的家常菜做法分享',
+                    author: '赵六',
+                    time: '2天前',
+                    likes: 432,
+                    comments: 198,
+                    views: '2.3万',
+                    summary: '今天教大家做一道简单又美味的家常菜，材料简单，步骤清晰，适合新手学习...',
+                    content: `
+                        <p>大家好，我是美食爱好者赵六。今天想教大家做一道简单又美味的家常菜。</p>
+                        
+                        <p><strong>一、材料准备</strong></p>
+                        <p>主要材料：猪肉300克，青椒2个，红椒1个，蒜末适量，姜末适量。</p>
+                        
+                        <p><strong>二、制作步骤</strong></p>
+                        <p>1. 猪肉切丝，用料酒、生抽腌制10分钟</p>
+                        <p>2. 青红椒切丝备用</p>
+                        <p>3. 热锅凉油，下蒜末姜末爆香</p>
+                        <p>4. 加入肉丝翻炒至变色</p>
+                        <p>5. 加入青红椒丝继续翻炒</p>
+                        <p>6. 最后加入适量盐和生抽调味即可</p>
+                        
+                        <p>这道菜简单易学，适合新手尝试！</p>
+                    `
+                },
+                {
+                    title: '【旅游攻略】五一假期最适合去的几个地方',
+                    author: '钱七',
+                    time: '3天前',
+                    likes: 287,
+                    comments: 123,
+                    views: '1.8万',
+                    summary: '五一假期快到了，给大家推荐几个性价比高的旅游目的地，人少景美...',
+                    content: `
+                        <p>大家好，我是旅游达人钱七。五一假期即将到来，给大家推荐几个不错的旅游目的地。</p>
+                        
+                        <p><strong>一、自然风光类</strong></p>
+                        <p>1. 张家界国家森林公园 - 奇峰异石，景色壮观</p>
+                        <p>2. 九寨沟 - 五彩池水，如诗如画</p>
+                        
+                        <p><strong>二、历史文化类</strong></p>
+                        <p>1. 西安古城 - 感受千年历史文化</p>
+                        <p>2. 平遥古城 - 保存完好的明清建筑</p>
+                        
+                        <p><strong>三、海滨度假类</strong></p>
+                        <p>1. 三亚 - 阳光沙滩，热带风情</p>
+                        <p>2. 青岛 - 红瓦绿树，碧海蓝天</p>
+                        
+                        <p>希望大家五一假期玩得开心！</p>
+                    `
+                }
+            ];
+            
+            // 更新帖子内容
+            const post = postData[currentPostIndex];
+            document.querySelector('.post-title').textContent = post.title;
+            document.querySelector('.author-name').textContent = post.author;
+            document.querySelector('.post-time').textContent = '发布于 ' + post.time;
+            document.querySelector('.post-stat:nth-child(1)').innerHTML = '<i>👍</i> ' + post.likes;
+            document.querySelector('.post-stat:nth-child(2)').innerHTML = '<i>💬</i> ' + post.comments;
+            document.querySelector('.post-stat:nth-child(3)').innerHTML = '<i>👁️</i> ' + post.views;
+            document.querySelector('.post-summary p').textContent = post.summary;
+            document.querySelector('.post-text').innerHTML = post.content;
+            
+            // 更新页面标题
+            document.title = post.title + ' - 百度贴吧';
+            
+            // 点赞功能
+            const likeBtn = document.getElementById('likeBtn');
+            let isLiked = false;
+            
+            likeBtn.addEventListener('click', function() {
+                isLiked = !isLiked;
+                if (isLiked) {
+                    this.classList.add('liked');
+                    this.innerHTML = '<i>👍</i> 已点赞';
+                } else {
+                    this.classList.remove('liked');
+                    this.innerHTML = '<i>👍</i> 点赞';
+                }
+            });
+
+            // 评论提交
+            const commentSubmit = document.querySelector('.comment-submit');
+            const commentInput = document.querySelector('.comment-input');
+            
+            commentSubmit.addEventListener('click', function() {
+                const commentText = commentInput.value.trim();
+                if (commentText) {
+                    alert('评论发表成功！');
+                    commentInput.value = '';
+                } else {
+                    alert('请输入评论内容');
+                }
+            });
+
+            // 回车提交评论
+            commentInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter' && e.ctrlKey) {
+                    commentSubmit.click();
+                }
+            });
+
+            // 导航栏链接点击效果
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // 只有当链接是锚链接（#）时才阻止默认行为
+                    if (this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        
+                        // 移除所有激活状态
+                        navLinks.forEach(l => l.classList.remove('active'));
+                        // 添加当前激活状态
+                        this.classList.add('active');
+                    }
+                    // 有有效链接的按钮可以正常跳转
+                });
+            });
+        });
+    </script>
+</body>
+</html>
