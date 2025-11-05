@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度贴吧思维导图 - 图形化展示</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mermaid {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 5px solid #667eea;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .section h2 {
+            color: #333;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📊 百度贴吧项目思维导图</h1>
+        
+        <div class="mermaid">
+flowchart TD
+    A[百度贴吧项目] --> B[项目概述]
+    A --> C[功能架构]
+    A --> D[技术架构]
+    A --> E[用户体验设计]
+    A --> F[数据管理]
+    A --> G[安全与维护]
+    
+    B --> B1[项目名称: 百度贴吧电脑版原型 V1.0]
+    B --> B2[项目目标: 打造功能完整、交互流畅的社区平台]
+    B --> B3[核心页面: 4个页面]
+    B --> B4[核心功能: 10项功能]
+    
+    C --> C1[首页功能模块]
+    C --> C2[帖子详情页功能模块]
+    C --> C3[发帖页功能模块]
+    C --> C4[个人中心页功能模块]
+    C --> C5[管理员功能模块]
+    
+    C1 --> C11[分类导航]
+    C1 --> C12[帖子浏览]
+    C1 --> C13[搜索功能]
+    C1 --> C14[页面导航]
+    C1 --> C15[帖子排序]
+    
+    C2 --> C21[内容展示]
+    C2 --> C22[评论功能]
+    C2 --> C23[互动功能]
+    
+    C3 --> C31[帖子发布]
+    C3 --> C32[贴吧选择]
+    
+    C4 --> C41[个人信息管理]
+    C4 --> C42[内容管理]
+    C4 --> C43[互动记录]
+    
+    D --> D1[前端技术栈: Web技术]
+    D --> D2[后端技术栈: 关系型数据库]
+    D --> D3[性能要求: 加载≤2秒]
+    
+    E --> E1[设计原则: 一致性/简洁性]
+    E --> E2[交互设计: 清晰导航]
+    
+    F --> F1[数据结构: 用户/帖子/评论/贴吧]
+    F --> F2[存储策略: 数据库/文件/缓存]
+    
+    G --> G1[安全需求: 输入验证/权限控制]
+    G --> G2[可维护性: 代码规范/模块化]
+        </div>
+        
+        <div class="section">
+            <h2>🔍 详细功能模块</h2>
+            <div class="mermaid">
+flowchart LR
+    subgraph 首页功能
+        A1[分类导航] --> A2[帖子浏览]
+        A2 --> A3[搜索功能]
+        A3 --> A4[页面导航]
+        A4 --> A5[帖子排序]
+    end
+    
+    subgraph 帖子详情页
+        B1[内容展示] --> B2[评论功能]
+        B2 --> B3[互动功能]
+    end
+    
+    subgraph 发帖页
+        C1[帖子发布] --> C2[贴吧选择]
+    end
+    
+    subgraph 个人中心
+        D1[个人信息] --> D2[内容管理]
+        D2 --> D3[互动记录]
+    end
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>⚙️ 技术架构图</h2>
+            <div class="mermaid">
+flowchart TB
+    subgraph 前端层
+        F1[用户界面] --> F2[业务逻辑]
+        F2 --> F3[数据交互]
+    end
+    
+    subgraph 后端层
+        B1[API接口] --> B2[业务处理]
+        B2 --> B3[数据访问]
+    end
+    
+    subgraph 数据层
+        D1[关系型数据库] --> D2[文件存储]
+        D2 --> D3[缓存系统]
+    end
+    
+    F3 --> B1
+    B3 --> D1
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true,
+                curve: 'basis'
+            },
+            securityLevel: 'loose'
+        });
+    </script>
+</body>
+</html>

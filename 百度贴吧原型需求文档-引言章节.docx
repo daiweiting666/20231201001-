@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>
+    
+    <!-- 章节标题：引言 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="1"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>引言</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 文档目的 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>1.1 文档目的</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>本文档旨在明确描述百度贴吧电脑版原型 V1.0 的需求规格，作为原型验收、后续迭代开发的依据。通过规范化的需求描述，确保开发团队、产品团队和测试团队对产品功能有统一的理解，为项目顺利实施提供基础保障。</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 项目背景 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>1.2 项目背景</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>为满足用户在线交流、内容分享的社交需求，本项目开发包含首页、帖子详情等核心页面的轻量化贴吧原型。该原型将重点实现贴吧社区的基础功能，为用户提供简洁、高效的内容浏览和互动体验，同时为后续功能扩展奠定技术基础。</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 项目范围 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>1.3 项目范围</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>本项目包含以下核心内容：</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 4个核心页面：首页、帖子详情页、个人中心页、发帖页</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 10项基础功能：搜索、发帖、评论、点赞、收藏、浏览、关注、分享、个人资料管理、内容管理</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>本项目暂不包含直播、商城、游戏等扩展模块，专注于核心社区功能的实现。</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 术语定义 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>1.4 术语定义</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>为统一项目术语理解，定义如下关键术语：</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 术语定义表格 -->
+    <w:tbl>
+      <w:tblPr>
+        <w:tblW w:w="8000" w:type="dxa"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+        </w:tblBorders>
+      </w:tblPr>
+      
+      <!-- 表格标题行 -->
+      <w:tr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>术语</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>定义</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      
+      <!-- 帖子卡片 -->
+      <w:tr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>帖子卡片</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>显示作者、标题、内容摘要、发布时间、互动数据等内容单元</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      
+      <!-- 楼中楼 -->
+      <w:tr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>楼中楼</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>评论下的嵌套回复，支持多级回复结构，便于用户深入讨论</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      
+      <!-- 发帖 -->
+      <w:tr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>发帖</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>用户在贴吧中创建和发布新内容的行为，包括文字、图片等多媒体内容</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      
+      <!-- 点赞 -->
+      <w:tr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>点赞</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>用户对帖子或评论表示认可和喜欢的互动行为，通过点击按钮实现</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      
+      <!-- 评论 -->
+      <w:tr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>评论</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>用户对帖子内容进行回复和讨论的互动行为，支持文字和表情等内容</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      
+      <!-- 收藏 -->
+      <w:tr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>收藏</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>用户将感兴趣的内容保存到个人收藏夹中，便于后续查看和管理</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      
+      <!-- 个人中心 -->
+      <w:tr>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="2000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>个人中心</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:tcPr>
+            <w:tcW w:w="6000" w:type="dxa"/>
+          </w:tcPr>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>用户个人信息管理、内容查看和系统设置的专属页面</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      
+    </w:tbl>
+    
+    <!-- 文档结束 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    
+  </w:body>
+</w:document>

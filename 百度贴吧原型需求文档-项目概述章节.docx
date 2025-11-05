@@ -1,0 +1,2057 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>
+    
+    <!-- 章节标题：项目概述 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="1"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>项目概述</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 项目目标 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>2.1 项目目标</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>本项目旨在打造功能完整、交互流畅的百度贴吧电脑版原型，全面支持“浏览 - 互动 - 创作 - 管理”用户全流程体验。通过优化页面加载和交互响应，确保核心页面响应时间≤2秒，为用户提供高效、稳定的社区交流平台。</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>基于已实现的4个核心页面设计，项目将重点优化：</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 首页的帖子浏览效率和推荐算法</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 帖子详情页的评论互动体验</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 发帖页的内容创作便捷性</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 个人中心页的用户管理功能</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 用户画像 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>2.2 用户画像</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>本项目面向两类核心用户角色，具体特征如下：</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 普通用户画像 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="22"/>
+          <w:szCs w:val="22"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="22"/>
+          <w:szCs w:val="22"/>
+        </w:rPr>
+        <w:t>2.2.1 普通用户</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 年龄分布：18-35岁，主要为大学生和年轻职场人士</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 核心需求：发帖分享生活经验、评论互动交流、收藏优质内容、关注兴趣贴吧</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 使用场景：通过首页浏览热门内容，在帖子详情页参与讨论，使用个人中心管理个人内容</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 管理员画像 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="3"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="22"/>
+          <w:szCs w:val="22"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="22"/>
+          <w:szCs w:val="22"/>
+        </w:rPr>
+        <w:t>2.2.2 管理员</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 核心职责：查看用户发布内容，审核帖子合规性，处理违规内容，维护社区秩序</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 权限设计：原型预留管理员权限入口，支持内容审核和用户管理功能扩展</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 使用场景：通过增强版个人中心访问管理功能，在帖子详情页执行内容审核操作</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 核心价值 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>2.3 核心价值</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>本项目为用户提供垂直兴趣交流平台，通过以下方式降低内容创作与获取门槛：</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 简化发帖流程：通过发帖页的富文本编辑器和贴吧选择功能，降低内容创作技术门槛</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 优化内容发现：首页和发现页的智能推荐算法，帮助用户快速找到感兴趣内容</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 增强互动体验：帖子详情页的评论系统和点赞功能，促进用户间深度交流</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 完善内容管理：通过个人中心页满足用户对帖子、收藏、消息的统一管理需求</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 原型信息引用 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>2.4 原型设计基础</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>本项目基于已实现的4个核心页面设计，具体包括：</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 首页：作为平台主入口，通过卡片式布局展示热门贴吧和帖子，支持快速内容浏览和搜索</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 帖子详情页：提供完整的帖子内容展示和评论区，支持点赞、评论、分享等互动功能</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 发帖页：配备富文本编辑器和贴吧选择功能，为用户提供便捷的内容创作体验</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 个人中心页：通过标签页设计实现个人信息、帖子管理、收藏内容、消息通知的统一管理</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>这些页面设计已通过HTML原型验证，具备良好的用户体验和功能完整性，为后续开发奠定坚实基础。</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 第五章：原型设计需求 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="1"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>第五章 原型设计需求</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 5.1 页面布局规范 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>5.1 页面布局规范</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 首页采用三栏布局：左侧分类栏（宽度240px）、中间帖子列表（自适应宽度）、右侧信息栏（宽度300px），与原型index.html布局一致；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 帖子详情页采用两栏布局：左侧帖子内容区（宽度70%）、右侧相关推荐区（宽度30%），评论区位于帖子内容下方；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 发帖页采用居中布局：标题输入区（宽度800px）、内容编辑区（宽度800px）、贴吧选择区（宽度800px），底部操作按钮居中排列；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 个人中心页采用标签页布局：顶部导航标签（个人信息、我的帖子、我的收藏、消息通知），内容区根据标签切换显示对应内容。</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 5.2 核心界面元素设计 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>5.2 核心界面元素设计</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 搜索区为紫色渐变背景，搜索框宽度500px，提示文字为灰色“搜索贴吧 / 帖子”；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 帖子卡片采用白色背景，圆角8px，阴影效果，标题字体16px加粗，内容预览14px灰色；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 评论输入框高度120px，边框1px实线#ddd，发布按钮蓝色背景，圆角4px；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 点赞按钮红色心形图标，收藏按钮黄色星形图标，分享按钮蓝色分享图标。</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 5.3 交互流程 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>5.3 交互流程</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 用户浏览首页→点击帖子标题→跳转至详情页→输入评论→点击发布→评论添加至列表顶部；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 用户点击发帖按钮→选择目标贴吧→输入标题和内容→点击发布→帖子发布成功并跳转至详情页；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 用户登录→进入个人中心→查看我的帖子→点击编辑按钮→修改内容→保存修改；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 管理员登录→进入管理后台→查看帖子列表→审核违规内容→删除或设置精华帖。</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 5.4 附件要求 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="2"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>5.4 附件要求</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>页面截图清单：</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 首页完整布局图：展示三栏布局结构和各功能区分布；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 帖子详情页评论区图：展示评论输入框和评论列表布局；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 发帖页编辑界面图：展示标题输入、内容编辑、贴吧选择区域；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 个人中心页标签切换图：展示不同标签页的内容切换效果；</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>• 搜索功能界面图：展示搜索框和搜索结果展示样式。</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 第六章：数据需求 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="1"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>第六章 数据需求</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>核心数据实体及属性：</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 帖子实体表格 -->
+    <w:tbl>
+      <w:tblPr>
+        <w:tblStyle w:val="TableGrid"/>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+        </w:tblBorders>
+      </w:tblPr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:b/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>帖子实体</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>帖子ID、标题、作者、发布时间、回复数、点赞数、收藏数、内容、贴吧ID、状态（正常/精华/删除）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:b/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>用户实体</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>用户ID、用户名、头像、注册时间、发帖数、粉丝数、关注数、个人简介</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:b/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>评论实体</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>评论ID、帖子ID、用户ID、评论内容、评论时间、点赞数、回复数</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:b/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>贴吧实体</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>贴吧ID、贴吧名称、贴吧简介、创建时间、关注人数、帖子总数、吧主ID</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:b/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>收藏实体</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>收藏ID、用户ID、帖子ID、收藏时间</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    
+    <!-- 第七章：接口需求 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="1"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>第七章 接口需求</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>模拟接口功能与参数：</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 接口需求表格 -->
+    <w:tbl>
+      <w:tblPr>
+        <w:tblStyle w:val="TableGrid"/>
+        <w:tblW w:w="0" w:type="auto"/>
+        <w:tblBorders>
+          <w:top w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:left w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:bottom w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:right w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:insideH w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+          <w:insideV w:val="single" w:sz="4" w:space="0" w:color="auto"/>
+        </w:tblBorders>
+      </w:tblPr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:b/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>接口名称</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:b/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>功能描述</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:b/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>请求参数</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:b/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>返回数据</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>模拟发帖接口</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>提交帖子数据</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>贴吧ID、标题、内容、作者ID</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>帖子ID</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>模拟获取帖子列表接口</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>获取帖子列表数据</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>贴吧ID、页码、每页数量、排序方式</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>帖子列表数组</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>模拟评论接口</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>提交评论数据</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>帖子ID、用户ID、评论内容</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>评论ID</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>模拟点赞接口</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>点赞/取消点赞操作</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>帖子ID、用户ID、操作类型（点赞/取消）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>操作结果（成功/失败）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>模拟收藏接口</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>收藏/取消收藏操作</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>帖子ID、用户ID、操作类型（收藏/取消）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>操作结果（成功/失败）</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+      <w:tr>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>模拟搜索接口</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>搜索贴吧和帖子</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>关键词、搜索类型（贴吧/帖子）、页码</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+        <w:tc>
+          <w:p>
+            <w:r>
+              <w:rPr>
+                <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+                <w:sz w:val="20"/>
+                <w:szCs w:val="20"/>
+              </w:rPr>
+              <w:t>搜索结果列表</w:t>
+            </w:r>
+          </w:p>
+        </w:tc>
+      </w:tr>
+    </w:tbl>
+    
+    <!-- 技术说明 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>说明：当前原型使用静态数据模拟接口调用，正式开发需对接后端API。</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 第八章：验收标准 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="1"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>第八章 验收标准</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>P0/P1级功能验收标准：</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 首页分类切换功能 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>首页分类切换功能：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>点击"游戏吧"分类，帖子列表显示5条游戏类帖子；点击"美食吧"，列表实时更新为美食类帖子，无加载延迟</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 发帖功能 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>发帖功能：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>选择贴吧、输入标题和内容后，点击"发布"按钮，系统提示"发布成功"，跳转至首页可看到新帖子</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 评论功能 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>评论功能：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>在详情页输入评论内容，点击发布后，评论立即显示在列表顶部，显示评论人昵称和发布时间</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 帖子详情查看功能 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>帖子详情查看功能：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>点击首页帖子标题，正确跳转至详情页，完整显示帖子标题、作者、发布时间、内容、点赞数、回复数</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 点赞功能 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>点赞功能：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>点击点赞按钮，点赞数实时增加1，按钮状态变为已点赞；再次点击取消点赞，点赞数减少1，按钮状态恢复</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 搜索功能 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>搜索功能：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>在搜索框输入关键词"游戏"，点击搜索按钮，正确显示包含"游戏"关键词的贴吧和帖子列表</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 个人中心功能 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>个人中心功能：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>点击个人中心入口，正确显示用户信息、我的帖子列表、我的收藏列表，支持标签页切换</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 帖子排序功能 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>帖子排序功能：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>点击"最新发布"按钮，帖子按发布时间倒序排列；点击"最热"按钮，帖子按回复数倒序排列</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 收藏功能 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>收藏功能：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>点击收藏按钮，按钮状态变为已收藏，在个人中心收藏列表中可看到该帖子；点击取消收藏，帖子从收藏列表移除</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 验收方法 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:b/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>验收方法：</w:t>
+      </w:r>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>通过人工操作测试，对照上述条件逐一验证</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 第九章：参考文献 -->
+    <w:p>
+      <w:pPr>
+        <w:pStyle w:val="1"/>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="黑体" w:eastAsia="黑体"/>
+          <w:sz w:val="24"/>
+          <w:szCs w:val="24"/>
+        </w:rPr>
+        <w:t>第九章 参考文献</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>1. 百度贴吧官方界面设计规范 - 参考百度贴吧官方界面设计规范</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>2. Web前端开发规范 - 基于HTML5、CSS3、JavaScript标准规范</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>3. 用户体验设计原则 - 遵循尼尔森十大可用性原则</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>4. 响应式网页设计指南 - 确保在不同设备上的兼容性</w:t>
+      </w:r>
+    </w:p>
+    
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+      <w:r>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+        <w:t>5. 软件需求规格说明书编写规范 - 符合IEEE 830标准</w:t>
+      </w:r>
+    </w:p>
+    
+    <!-- 文档结束 -->
+    <w:p>
+      <w:pPr>
+        <w:rPr>
+          <w:rFonts w:ascii="宋体" w:eastAsia="宋体"/>
+          <w:sz w:val="20"/>
+          <w:szCs w:val="20"/>
+        </w:rPr>
+      </w:pPr>
+    </w:p>
+    
+  </w:body>
+</w:document>

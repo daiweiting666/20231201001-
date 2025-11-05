@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>百度贴吧E-R图 - 图形化展示</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.6.1/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            padding: 30px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mermaid {
+            text-align: center;
+            margin: 20px 0;
+            overflow: auto;
+        }
+        .section {
+            margin: 40px 0;
+            padding: 20px;
+            border-left: 5px solid #f093fb;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .section h2 {
+            color: #333;
+            margin-top: 0;
+        }
+        .entity-card {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            background: #fff;
+            border: 2px solid #f093fb;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            min-width: 200px;
+        }
+        .entity-card h3 {
+            margin: 0 0 10px 0;
+            color: #f5576c;
+        }
+        .entity-card ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        .entity-card li {
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🗃️ 百度贴吧项目E-R图</h1>
+        
+        <div class="section">
+            <h2>📋 核心实体概览</h2>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+                <div class="entity-card">
+                    <h3>👤 用户实体</h3>
+                    <ul>
+                        <li>user_id (主键)</li>
+                        <li>username</li>
+                        <li>avatar</li>
+                        <li>signature</li>
+                        <li>registration_time</li>
+                    </ul>
+                </div>
+                <div class="entity-card">
+                    <h3>🏷️ 贴吧实体</h3>
+                    <ul>
+                        <li>forum_id (主键)</li>
+                        <li>forum_name</li>
+                        <li>description</li>
+                        <li>creator_id</li>
+                        <li>member_count</li>
+                    </ul>
+                </div>
+                <div class="entity-card">
+                    <h3>📝 帖子实体</h3>
+                    <ul>
+                        <li>post_id (主键)</li>
+                        <li>title</li>
+                        <li>content</li>
+                        <li>author_id</li>
+                        <li>forum_id</li>
+                    </ul>
+                </div>
+                <div class="entity-card">
+                    <h3>💬 评论实体</h3>
+                    <ul>
+                        <li>comment_id (主键)</li>
+                        <li>content</li>
+                        <li>author_id</li>
+                        <li>post_id</li>
+                        <li>parent_id</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🔗 完整实体关系图</h2>
+            <div class="mermaid">
+erDiagram
+    %% 用户实体
+    USER {
+        int user_id PK "用户ID"
+        string username "用户名"
+        string password "密码"
+        string email "邮箱"
+        string avatar "头像"
+        string signature "签名"
+        timestamp registration_time "注册时间"
+        timestamp last_login_time "最后登录"
+        enum status "状态"
+    }
+    
+    %% 贴吧实体
+    FORUM {
+        int forum_id PK "贴吧ID"
+        string forum_name "贴吧名称"
+        text description "描述"
+        int creator_id FK "创建者ID"
+        timestamp create_time "创建时间"
+        int member_count "成员数"
+        int post_count "帖子数"
+        enum status "状态"
+    }
+    
+    %% 帖子实体
+    POST {
+        int post_id PK "帖子ID"
+        string title "标题"
+        text content "内容"
+        int author_id FK "作者ID"
+        int forum_id FK "贴吧ID"
+        timestamp create_time "发布时间"
+        timestamp update_time "更新时间"
+        int view_count "浏览数"
+        int reply_count "回复数"
+        int like_count "点赞数"
+        enum status "状态"
+        boolean is_top "是否置顶"
+    }
+    
+    %% 评论实体
+    COMMENT {
+        int comment_id PK "评论ID"
+        text content "内容"
+        int author_id FK "作者ID"
+        int post_id FK "帖子ID"
+        int parent_id FK "父评论ID"
+        timestamp create_time "评论时间"
+        int like_count "点赞数"
+        int reply_count "回复数"
+        enum status "状态"
+    }
+    
+    %% 点赞实体
+    LIKE {
+        int user_id FK "用户ID"
+        int target_id "目标ID"
+        enum target_type "目标类型"
+        timestamp create_time "点赞时间"
+    }
+    
+    %% 收藏实体
+    FAVORITE {
+        int user_id FK "用户ID"
+        int post_id FK "帖子ID"
+        timestamp create_time "收藏时间"
+    }
+    
+    %% 关注实体
+    FOLLOW {
+        int follower_id FK "关注者ID"
+        int followed_id "被关注者ID"
+        enum follow_type "关注类型"
+        timestamp create_time "关注时间"
+    }
+    
+    %% 浏览历史实体
+    VIEW_HISTORY {
+        int user_id FK "用户ID"
+        int post_id FK "帖子ID"
+        timestamp view_time "浏览时间"
+        int duration "浏览时长"
+    }
+    
+    %% 实体关系定义
+    USER ||--o{ POST : "发布"
+    USER ||--o{ COMMENT : "评论"
+    USER ||--o{ LIKE : "点赞"
+    USER ||--o{ FAVORITE : "收藏"
+    USER ||--o{ FOLLOW : "关注"
+    USER ||--o{ VIEW_HISTORY : "浏览"
+    
+    FORUM ||--o{ POST : "包含"
+    
+    POST ||--o{ COMMENT : "拥有"
+    POST ||--o{ LIKE : "被点赞"
+    POST ||--o{ FAVORITE : "被收藏"
+    POST ||--o{ VIEW_HISTORY : "被浏览"
+    
+    COMMENT ||--o{ COMMENT : "回复"
+    COMMENT ||--o{ LIKE : "被点赞"
+    
+    USER ||--o{ USER : "关注"
+    USER ||--o{ FORUM : "关注"
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>📊 关系类型说明</h2>
+            <div class="mermaid">
+flowchart TD
+    A[关系类型] --> B[一对多关系]
+    A --> C[多对多关系]
+    A --> D[自关联关系]
+    
+    B --> B1[用户-帖子: 1:N]
+    B --> B2[贴吧-帖子: 1:N]
+    B --> B3[帖子-评论: 1:N]
+    
+    C --> C1[用户-用户: N:N]
+    C --> C2[用户-贴吧: N:N]
+    
+    D --> D1[评论-评论: 自关联]
+    D --> D2[用户-用户: 自关联]
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>🔑 主键和外键关系</h2>
+            <div class="mermaid">
+flowchart LR
+    subgraph 主键关系
+        P1[user_id] --> P2[用户表主键]
+        P3[forum_id] --> P4[贴吧表主键]
+        P5[post_id] --> P6[帖子表主键]
+        P7[comment_id] --> P8[评论表主键]
+    end
+    
+    subgraph 外键关系
+        F1[author_id] --> F2[关联用户表]
+        F3[forum_id] --> F4[关联贴吧表]
+        F5[post_id] --> F6[关联帖子表]
+        F7[parent_id] --> F8[关联评论表]
+    end
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            er: {
+                useMaxWidth: true,
+                diagramPadding: 20,
+                layoutDirection: 'TB'
+            },
+            flowchart: {
+                useMaxWidth: true,
+                htmlLabels: true
+            },
+            securityLevel: 'loose'
+        });
+    </script>
+</body>
+</html>
